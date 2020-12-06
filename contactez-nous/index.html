@@ -410,16 +410,16 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
                 	
 
 <div class="wpforms-container wpforms-container-full" id="wpforms-970">
-	<form id="wpforms-form-970" class="wpforms-validate wpforms-form" data-formid="970" method="get" enctype="text/plain" action="mailto:you@yourdmainhere.com">
+	<form id="wpforms-form-970" name="wpforms" class="wpforms-validate wpforms-form" data-formid="970" method="get" enctype="text/plain" action="mailto:frank.bettcher@gmail.com">
 		<div class="wpforms-field-container">
 			<div id="wpforms-970-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
 				<label class="wpforms-field-label" for="wpforms-970-field_0">Nom <span class="wpforms-required-label">*</span></label>
-				<input type="text" id="wpforms-970-field_0" class="wpforms-field-medium wpforms-field-required" name="subject" required>
+				<input type="text" id="wpforms-970-field_0" class="wpforms-field-medium wpforms-field-required" name="name" required>
 			</div>
-			<div id="wpforms-970-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
+<!--			<div id="wpforms-970-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
 				<label class="wpforms-field-label" for="wpforms-970-field_1">Adresse de contact <span class="wpforms-required-label">*</span></label>
 				<input type="email" id="wpforms-970-field_1" class="wpforms-field-medium wpforms-field-required" name="from" required>
-			</div>
+			</div>-->
 			<div id="wpforms-970-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2">
 				<label class="wpforms-field-label" for="wpforms-970-field_2">Comment or Message <span class="wpforms-required-label">*</span></label>
 				<textarea id="wpforms-970-field_2" class="wpforms-field-medium wpforms-field-required" name="body" required></textarea>
@@ -433,9 +433,19 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 			<input type="hidden" name="wpforms[id]" value="970">
 			<input type="hidden" name="wpforms[author]" value="1">
 			<input type="hidden" name="wpforms[post_id]" value="55">
-			<button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-970" value="wpforms-submit" data-alt-texte="Envoi en cours...">Envoyer</button>
+			<button name="wpforms[submit]" class="wpforms-page-button " id="wpforms-submit-970" value="wpforms-submit" data-alt-texte="Envoi en cours..." onClick="clic(this);">Envoyer</button>
 		</div>
 	</form>
+	<script>
+		function clic(element)
+		{
+		  var subject = "Demande de M."+document.wpforms.name.value;
+		  var body = document.wpforms.body.value;
+		  //var from = document.wpforms.from.value;
+		  window.location.href=`mailto:frank.bettcher@gmail.com?subject=${subject}&body=${body}`;
+		}
+	</script>
+	
 	</div>
 
 
