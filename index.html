@@ -19,7 +19,7 @@
 		<link rel="pingback" href="xmlrpc.php" />
         
         <!-- WP_HEAD STARTS -->
-        <link rel='dns-prefetch' href='https://maps.googleapis.com/' />
+ <!--        <link rel='dns-prefetch' href='https://maps.googleapis.com/' /> -->
 <link rel='dns-prefetch' href='http://s.w.org/' />
 <link rel="alternate" type="application/rss+xml" title="directEpi &raquo; Flux" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="directEpi &raquo; Flux des commentaires" href="comments/feed/index.html" />
@@ -78,9 +78,9 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 /* ]]> */
 </script>
 <script type='text/javascript' src='wp-content/themes/spotfinder/js/sf.users.min9738.js?ver=5.1.8'></script>
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGf0qPnFa9teoRQue8zy8mJzpqa98K5QA&amp;sensor=false&amp;ver=5.1.8'></script>
+ <!--<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGf0qPnFa9teoRQue8zy8mJzpqa98K5QA&amp;sensor=false&amp;ver=5.1.8'></script>
 <script type='text/javascript' src='wp-content/themes/spotfinder/js/gmap3.min9738.js?ver=5.1.8'></script>
-<script type='text/javascript' src='wp-content/themes/spotfinder/js/markerclusterer.min9738.js?ver=5.1.8'></script>
+<script type='text/javascript' src='wp-content/themes/spotfinder/js/markerclusterer.min9738.js?ver=5.1.8'></script>-->
 <script type='text/javascript' src='wp-content/themes/spotfinder/js/jquery.mCustomScrollbar.min9738.js?ver=5.1.8'></script>
 <link rel='https://api.w.org/' href='wp-json/index.html' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
@@ -395,7 +395,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
  
  </div>    
 
-		<div id="slider">
+<!--		<div id="slider">
 	
 		<div id="search-ipad" class="ipad-only"><i class="icon-search"></i> Filtrer</div>
 
@@ -603,10 +603,10 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 
 	jQuery(document).ready(function() {
 		
-		google.maps.visualRefresh = true;
+		//google.maps.visualRefresh = true;
 		
 		//// INITIATES OUR MAP
-		jQuery('#slider-map').gmap3({
+		/*jQuery('#slider-map').gmap3({
 			
 			map: {
 				
@@ -658,7 +658,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 		
 		//// ADDS A LISTENER TO REMOVE OVERLAYS WHEN WE MOVE THE MAP
 		google.maps.event.addListener(theMap, 'bounds_changed', function() { jQuery('#slider-map').removeOverlays(); });
-	
+		*/
 	
 	
 				
@@ -688,7 +688,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 			}];
 							
 			//// ADDS CLUSTERER GLOBAL
-			clusterManager = new MarkerClusterer(theMap, [], {
+			/*clusterManager = new MarkerClusterer(theMap, [], {
 				
 				styles: styles,
 				zoomOnClick: false
@@ -756,21 +756,22 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 		
 				
 		jQuery('#map-zoom-in').mapZoomIn(); jQuery('#map-zoom-out').mapZoomOut();		
+		*/
 	});
 
 </script>
 
-<div id="slider-map"></div>
-<!-- /#slider map/ -->
+<!--<div id="slider-map"></div>
+ /#slider map/ -->
 
-<div id="slider-map-message"><span></span></div>
-<!-- /#slider-map-message/ -->
+<!--<div id="slider-map-message"><span></span></div>
+ /#slider-map-message/ -->
 
-<div id="map-zoom-in"><i class="icon-plus"></i></div>
-<!-- /#map-zoom-in/ -->
+<!--<div id="map-zoom-in"><i class="icon-plus"></i></div>
+ /#map-zoom-in/ -->
 
-<div id="map-zoom-out"><i class="icon-minus"></i></div>
-<!-- /#map-zoom-in/ -->
+<!--<div id="map-zoom-out"><i class="icon-minus"></i></div>
+ /#map-zoom-in/ -->
 
 </div>
 <!-- /#slider/ -->
@@ -780,10 +781,10 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 
 	<div class="wrapper">
     
-    	<div class="left"><span id="listing-results-count"></span></div>
-		<!-- /.left/ -->        
+    	<!--<div class="left"><span id="listing-results-count"></span></div>
+		 /.left/ -->        
         
-        <div class="right"><a href="liste-des-installations-pilotes" id="listing-results-page">Voir la liste</a></div>
+        <div class="left"><a href="/liste-des-installations-pilotes/index.html" id="listing-results-page">Voir la liste des installations</a></div>
         <!-- /.right/ -->
     
     </div>
@@ -812,7 +813,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
         	<div class="home-post" id="home-post-75" style="background: #ffffff;">
             
             	<div class="wrapper">
-                
+                <img src="wp-content/images/varilum.jpg"/>
                 <div>Le <a href="/le-varilum/" target="_blank">Varilum </a>est un économiseur d&rsquo;énergie à l&rsquo;armoire pour l&rsquo;Eclairage Public et l&rsquo;Eclairage Industriel.</div>
 <div></div>
 <div>Il permet d&rsquo;obtenir de 20 à 40 % d&rsquo;économies, sans grandes modifications du réseau d&rsquo;éclairage, pour un temps de retour de l&rsquo;ordre de 2 ans, installation comprise.</div>
