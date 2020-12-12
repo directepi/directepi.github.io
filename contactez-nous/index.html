@@ -410,7 +410,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
                 	
 
 <div class="wpforms-container wpforms-container-full" id="wpforms-970">
-	<form id="wpforms-form-970" name="wpforms" class="wpforms-validate wpforms-form" data-formid="970" method="get" enctype="text/plain" action="mailto:frank.bettcher@gmail.com">
+	<form id="wpforms-form-970" name="wpforms" class="wpforms-validate wpforms-form" data-formid="970" method="post" enctype="text/plain" action="mailto:frank.bettcher@gmail.com">
 		<div class="wpforms-field-container">
 			<div id="wpforms-970-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
 				<label class="wpforms-field-label" for="wpforms-970-field_0">Nom <span class="wpforms-required-label">*</span></label>
@@ -421,7 +421,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 				<input type="email" id="wpforms-970-field_1" class="wpforms-field-medium wpforms-field-required" name="from" required>
 			</div>-->
 			<div id="wpforms-970-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2">
-				<label class="wpforms-field-label" for="wpforms-970-field_2">Comment or Message <span class="wpforms-required-label">*</span></label>
+				<label class="wpforms-field-label" for="wpforms-970-field_2">Message <span class="wpforms-required-label">*</span></label>
 				<textarea id="wpforms-970-field_2" class="wpforms-field-medium wpforms-field-required" name="body" required></textarea>
 			</div>
 		</div>
@@ -440,7 +440,7 @@ var sf_us = {"ajaxurl":"\/wp-admin\/admin-ajax.php","_sf_logout_nonce":"cdbe4af7
 		function clic(element)
 		{
 		  var subject = "Demande de M."+document.wpforms.name.value;
-		  var body = document.wpforms.body.value;
+		  var body = encodeURIComponent(document.wpforms.body.value);
 		  //var from = document.wpforms.from.value;
 		  window.location.href=`mailto:frank.bettcher@gmail.com?subject=${subject}&body=${body}`;
 		}
